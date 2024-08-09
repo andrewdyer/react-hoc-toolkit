@@ -1,13 +1,13 @@
-# React Package Template
+# React HOC Toolkit
 
-A template for creating React packages.
+A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications. 
 
 ## Getting Started
 
 To install this package use npm:
 
 ```bash
-npm install @your-scope/react-package-template
+npm install react-hoc-toolkit
 ```
 
 ## Local Development
@@ -27,7 +27,7 @@ npm install yalc -g
 First, navigate to the project directory where you want to use this package and run:
 
 ```bash
-yalc add @your-scope/react-package-template
+yalc add react-hoc-toolkit
 ```
 
 This will install the package from the local Yalc store. You can now use it in the project as you would with any other npm package.
@@ -37,7 +37,7 @@ This will install the package from the local Yalc store. You can now use it in t
 After publishing changes to this package to the local Yalc store, navigate to the project directory and run:
 
 ```bash
-yalc update @your-scope/react-package-template
+yalc update react-hoc-toolkit
 ```
 
 This will update the installed version of this package in the project.

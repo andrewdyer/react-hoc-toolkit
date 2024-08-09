@@ -1,6 +1,6 @@
 {
-    "name": "react-package-template",
-    "description": "A template for creating React packages",
+    "name": "react-hoc-toolkit",
+    "description": "A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications",
     "version": "1.0.0",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -29,7 +29,7 @@
     "author": "Andrew Dyer (https://github.com/andrewdyer)",
     "repository": {
         "type": "git",
-        "url": "https://github.com/andrewdyer/react-package-template.git"
+        "url": "https://github.com/andrewdyer/react-hoc-toolkit.git"
     },
     "license": "MIT",
     "devDependencies": {
