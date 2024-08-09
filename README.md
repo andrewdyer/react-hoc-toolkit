@@ -70,14 +70,6 @@ Removes the `dist/` folder to ensure a clean build.
 
 Formats the code using Prettier according to the rules defined in package.json.
 
-### `npm run storybook`
-
-Runs the Storybook component explorer. Open http://localhost:6006 to view it in the browser.
-
-### `npm run build:storybook`
-
-Builds Storybook as a static web application. Useful for deploying to a static hosting service or sharing with others.
-
 ### `npm run test`
 
 Runs the test suite for the project using Jest.
