@@ -10,6 +10,33 @@ To install this package use npm:
 npm install react-hoc-toolkit
 ```
 
+## Usage
+
+## withLogger
+
+The `withLogger` Higher-Order Component (HOC) enhances your React components by logging their props and state changes. This is particularly useful for debugging and understanding the flow of data through your application:
+
+```tsx
+import React from 'react';
+import { withLogger } from 'react-hoc-toolkit';
+
+interface MyComponentProps {
+    message: string;
+}
+
+const MyComponent: React.FC<MyComponentProps> = ({ message }) => {
+    return <div>{message}</div>;
+};
+
+const MyComponentWithLogger = withLogger(MyComponent);
+
+const App: React.FC = () => {
+    return <MyComponentWithLogger message="Hello, World!" />;
+};
+
+export default App;
+```
+
 ## Local Development
 
 For local development, use Yalc to install this package in your project.
