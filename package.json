@@ -22,8 +22,10 @@
     },
     "keywords": [
         "react",
-        "package",
-        "template",
+        "react HOC",
+        "react higher-order components",
+        "react toolkit",
+        "react utilities",
         "typescript"
     ],
     "author": "Andrew Dyer (https://github.com/andrewdyer)",
