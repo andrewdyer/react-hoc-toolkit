@@ -37,6 +37,8 @@ const App: React.FC = () => {
 export default App;
 ```
 
+In this example, `withLogger` is used to wrap `MyComponent`, which logs the props passed to it. When `App` renders `MyComponentWithLogger` with the message "Hello, World!", the props will be logged to the console.
+
 ### composeHOCs
 
 The `composeHOCs` function allows you to compose multiple Higher-Order Components (HOCs) into a single HOC. This is useful when you want to apply multiple HOCs to a component in a clean and readable manner.
