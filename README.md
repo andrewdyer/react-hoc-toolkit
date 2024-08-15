@@ -2,6 +2,10 @@
 
 A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications.
 
+## License
+
+Licensed under MIT. Totally free for private or commercial projects.
+
 ## Getting Started
 
 To install this package use npm:
