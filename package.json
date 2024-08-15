@@ -1,7 +1,7 @@
 {
     "name": "react-hoc-toolkit",
     "description": "A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "types": "dist/types/index.d.ts",
