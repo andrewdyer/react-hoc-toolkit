@@ -39,6 +39,8 @@ export default App;
 
 ### composeHOCs
 
+The `composeHOCs` function allows you to compose multiple Higher-Order Components (HOCs) into a single HOC. This is useful when you want to apply multiple HOCs to a component in a clean and readable manner.
+
 ```tsx
 import React from 'react';
 import { composeHOCs, withLogger } from 'react-hoc-toolkit';
@@ -59,6 +61,8 @@ const App: React.FC = () => {
 
 export default App;
 ```
+
+In this example, `composeHOCs` is used to apply the `withLogger` HOC to `MyComponent`. You can pass multiple HOCs to `composeHOCs` to apply them in sequence.
 
 ## Local Development
 
