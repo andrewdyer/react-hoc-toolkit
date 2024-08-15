@@ -1,6 +1,6 @@
 # React HOC Toolkit
 
-A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications. 
+A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ npm install react-hoc-toolkit
 
 ## Usage
 
-## withLogger
+### withLogger
 
 The `withLogger` Higher-Order Component (HOC) enhances your React components by logging their props and state changes. This is particularly useful for debugging and understanding the flow of data through your application:
 
@@ -32,6 +32,29 @@ const MyComponentWithLogger = withLogger(MyComponent);
 
 const App: React.FC = () => {
     return <MyComponentWithLogger message="Hello, World!" />;
+};
+
+export default App;
+```
+
+### composeHOCs
+
+```tsx
+import React from 'react';
+import { composeHOCs, withLogger } from 'react-hoc-toolkit';
+
+interface MyComponentProps {
+    message: string;
+}
+
+const MyComponent: React.FC<MyComponentProps> = ({ message }) => {
+    return <div>{message}</div>;
+};
+
+const EnhancedComponent = composeHOCs(withLogger)(MyComponent);
+
+const App: React.FC = () => {
+    return <EnhancedComponent message="Hello, World!" />;
 };
 
 export default App;
