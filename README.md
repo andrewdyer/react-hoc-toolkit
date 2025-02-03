@@ -1,3 +1,5 @@
+![React HOC Toolkit](https://raw.githubusercontent.com/andrewdyer/andrewdyer/refs/heads/main/assets/images/covers/react-hoc-toolkit.png)
+
 # 🧰 React HOC Toolkit
 
 A collection of HOCs to enhance and simplify React development.
