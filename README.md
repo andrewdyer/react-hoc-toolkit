@@ -28,13 +28,13 @@ interface MyComponentProps {
     message: string;
 }
 
-const MyComponent: React.FC<MyComponentProps> = ({ message }) => {
+const MyComponent = ({ message }: MyComponentProps) => {
     return <div>{message}</div>;
 };
 
 const MyComponentWithLogger = withLogger(MyComponent);
 
-const App: React.FC = () => {
+const App = () => {
     return <MyComponentWithLogger message="Hello, World!" />;
 };
 
@@ -55,13 +55,13 @@ interface MyComponentProps {
     message: string;
 }
 
-const MyComponent: React.FC<MyComponentProps> = ({ message }) => {
+const MyComponent = ({ message }: MyComponentProps) => {
     return <div>{message}</div>;
 };
 
 const EnhancedComponent = composeHOCs(withLogger)(MyComponent);
 
-const App: React.FC = () => {
+const App = () => {
     return <EnhancedComponent message="Hello, World!" />;
 };
 
