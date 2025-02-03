@@ -6,6 +6,10 @@ A collection of Higher-Order Components (HOCs) designed to enhance and simplify 
 
 Licensed under the [MIT license](https://opensource.org/licenses/MIT) and is free for private or commercial projects.
 
+## ✨ Introduction
+
+React HOC Toolkit is a lightweight and easy-to-use library that provides a collection of useful Higher-Order Components (HOCs) for enhancing your React components.
+
 ## 📥 Installation
 
 To install this package use npm:
