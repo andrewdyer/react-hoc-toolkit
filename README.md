@@ -4,7 +4,7 @@ A collection of Higher-Order Components (HOCs) designed to enhance and simplify 
 
 ## 📄 License
 
-Licensed under MIT. Totally free for private or commercial projects.
+Licensed under the [MIT license](https://opensource.org/licenses/MIT) and is free for private or commercial projects.
 
 ## 🚀 Getting Started
 
