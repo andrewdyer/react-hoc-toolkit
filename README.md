@@ -1,12 +1,12 @@
-# React HOC Toolkit
+# 🧰 React HOC Toolkit
 
 A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications.
 
-## License
+## 📄 License
 
 Licensed under MIT. Totally free for private or commercial projects.
 
-## Getting Started
+## 🚀 Getting Started
 
 To install this package use npm:
 
@@ -14,7 +14,7 @@ To install this package use npm:
 npm install react-hoc-toolkit
 ```
 
-## Usage
+## 📖 Usage
 
 ### withLogger
 
