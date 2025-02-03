@@ -20,6 +20,12 @@ To install this package use npm:
 npm install react-hoc-toolkit
 ```
 
+Or with Yarn:
+
+```bash
+yarn add react-hoc-toolkit
+```
+
 ## 📖 Usage
 
 ### composeHOCs
