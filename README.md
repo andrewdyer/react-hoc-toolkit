@@ -1,6 +1,6 @@
 # 🧰 React HOC Toolkit
 
-A collection of Higher-Order Components (HOCs) designed to enhance and simplify the development of React applications.
+A collection of HOCs to enhance and simplify React development.
 
 ## 📄 License
 
