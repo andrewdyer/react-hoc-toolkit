@@ -1,4 +1,4 @@
-![React HOC Toolkit](https://raw.githubusercontent.com/andrewdyer/andrewdyer/refs/heads/main/assets/images/covers/react-hoc-toolkit.png)
+![React HOC Toolkit](https://raw.githubusercontent.com/andrewdyer/public-assets/refs/heads/main/images/covers/react-hoc-toolkit.png)
 
 # 🧰 React HOC Toolkit
 
