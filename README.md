@@ -1,5 +1,3 @@
-![React HOC Toolkit](https://public-assets.andrewdyer.rocks/images/covers/react-hoc-toolkit.png)
-
 # React HOC Toolkit
 
 A higher-order component library for React applications that composes multiple HOCs into one and logs component props for debugging.
