@@ -1,83 +1,86 @@
 ![React HOC Toolkit](https://public-assets.andrewdyer.rocks/images/covers/react-hoc-toolkit.png)
 
-# 🧰 React HOC Toolkit
+# React HOC Toolkit
 
-A collection of HOCs to enhance and simplify React development.
+A higher-order component library for React applications that composes multiple HOCs into one and logs component props for debugging.
 
-## 📄 License
+## Introduction
 
-Licensed under the [MIT license](https://opensource.org/licenses/MIT) and is free for private or commercial projects.
+This library provides small, typed utilities for working with higher-order components. Composition folds a list of higher-order components into a single enhancer, applying them from right to left so that the first one listed becomes the outermost wrapper. Logging wraps a component and writes its props to the console after render whenever they change, giving visibility of the data flowing through it without altering its output.
 
-## ✨ Introduction
+## Prerequisites
 
-React HOC Toolkit is a lightweight and easy-to-use library that provides a collection of useful Higher-Order Components (HOCs) for enhancing your React components.
+- **[React](https://react.dev/)**: Version 19.2 or later, together with React DOM, installed as peer dependencies.
+- **[Node.js](https://nodejs.org/)**: Version 24.19.0 or later, as specified by the package `engines` field.
 
-## 📥 Installation
-
-To install this package use npm:
+## Installation
 
 ```bash
 npm install react-hoc-toolkit
 ```
 
-Or with Yarn:
-
 ```bash
 yarn add react-hoc-toolkit
 ```
 
-## 📖 Usage
+```bash
+pnpm add react-hoc-toolkit
+```
+
+## Getting Started
+
+Import the required higher-order components from the package entry point.
+
+1. Import a utility by name:
+
+   ```tsx
+   import { composeHOCs, withLogger } from 'react-hoc-toolkit';
+   ```
+
+2. Apply it to an existing component and render the enhanced result in its place:
+
+   ```tsx
+   const Greeting = ({ message }: { message: string }) => <p>{message}</p>;
+
+   const LoggedGreeting = withLogger(Greeting);
+   ```
+
+## Usage
+
+Each utility accepts a component and returns an enhanced component with the same props.
 
 ### composeHOCs
 
-The `composeHOCs` function allows you to compose multiple Higher-Order Components (HOCs) into a single HOC. This is useful when you want to apply multiple HOCs to a component in a clean and readable manner.
+`composeHOCs` combines several higher-order components into one enhancer. They are applied from right to left, so the first argument wraps all the others.
 
 ```tsx
-import React from 'react';
 import { composeHOCs, withLogger } from 'react-hoc-toolkit';
 
-interface MyComponentProps {
-  message: string;
-}
+type GreetingProps = { message: string };
 
-const MyComponent = ({ message }: MyComponentProps) => {
-  return <div>{message}</div>;
-};
+const Greeting = ({ message }: GreetingProps) => <p>{message}</p>;
 
-const EnhancedComponent = composeHOCs(withLogger)(MyComponent);
+const enhance = composeHOCs<GreetingProps>(withLogger, withTheme);
 
-const App = () => {
-  return <EnhancedComponent message="Hello, World!" />;
-};
-
-export default App;
+const EnhancedGreeting = enhance(Greeting);
 ```
 
-In this example, `composeHOCs` is used to apply the `withLogger` HOC to `MyComponent`. You can pass multiple HOCs to `composeHOCs` to apply them in sequence.
+Here `withTheme` stands for any other higher-order component with a matching props type.
 
 ### withLogger
 
-The `withLogger` Higher-Order Component (HOC) enhances your React components by logging their props and state changes. This is particularly useful for debugging and understanding the flow of data through your application:
+`withLogger` logs the props of the wrapped component to the console after the first render and whenever the props change.
 
 ```tsx
-import React from 'react';
 import { withLogger } from 'react-hoc-toolkit';
 
-interface MyComponentProps {
-  message: string;
-}
+const Greeting = ({ message }: { message: string }) => <p>{message}</p>;
 
-const MyComponent = ({ message }: MyComponentProps) => {
-  return <div>{message}</div>;
-};
+const LoggedGreeting = withLogger(Greeting);
 
-const MyComponentWithLogger = withLogger(MyComponent);
-
-const App = () => {
-  return <MyComponentWithLogger message="Hello, World!" />;
-};
-
-export default App;
+const App = () => <LoggedGreeting message="Hello, world!" />;
 ```
 
-In this example, `withLogger` is used to wrap `MyComponent`, which logs the props passed to it. When `App` renders `MyComponentWithLogger` with the message "Hello, World!", the props will be logged to the console.
+## License
+
+Licensed under the [MIT License](LICENSE).

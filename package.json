@@ -1,14 +1,16 @@
 {
   "name": "react-hoc-toolkit",
-  "description": "A collection of HOCs to enhance and simplify React development",
+  "description": "A higher-order component library for React applications that composes multiple HOCs into one and logs component props for debugging.",
   "version": "2.0.0",
   "keywords": [
+    "typescript",
     "react",
-    "react HOC",
-    "react higher-order components",
-    "react toolkit",
-    "react utilities",
-    "typescript"
+    "react-dom",
+    "higher-order-components",
+    "hoc",
+    "compose",
+    "logger",
+    "debugging"
   ],
   "author": "Andrew Dyer (https://github.com/andrewdyer)",
   "license": "MIT",
