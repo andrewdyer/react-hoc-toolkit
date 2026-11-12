@@ -1,13 +1,13 @@
-import React from 'react';
+import { type ComponentType, useEffect } from 'react';
 
-const withLogger = <P extends object>(Component: React.ComponentType<P>) => {
-    return (props: P) => {
-        React.useEffect(() => {
-            console.log('Props:', props);
-        }, [props]);
+const withLogger = <P extends object>(Component: ComponentType<P>) => {
+  return (props: P) => {
+    useEffect(() => {
+      console.log('Props:', props);
+    }, [props]);
 
-        return <Component {...props} />;
-    };
+    return <Component {...props} />;
+  };
 };
 
 export default withLogger;

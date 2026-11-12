@@ -37,17 +37,17 @@ import React from 'react';
 import { composeHOCs, withLogger } from 'react-hoc-toolkit';
 
 interface MyComponentProps {
-    message: string;
+  message: string;
 }
 
 const MyComponent = ({ message }: MyComponentProps) => {
-    return <div>{message}</div>;
+  return <div>{message}</div>;
 };
 
 const EnhancedComponent = composeHOCs(withLogger)(MyComponent);
 
 const App = () => {
-    return <EnhancedComponent message="Hello, World!" />;
+  return <EnhancedComponent message="Hello, World!" />;
 };
 
 export default App;
@@ -64,17 +64,17 @@ import React from 'react';
 import { withLogger } from 'react-hoc-toolkit';
 
 interface MyComponentProps {
-    message: string;
+  message: string;
 }
 
 const MyComponent = ({ message }: MyComponentProps) => {
-    return <div>{message}</div>;
+  return <div>{message}</div>;
 };
 
 const MyComponentWithLogger = withLogger(MyComponent);
 
 const App = () => {
-    return <MyComponentWithLogger message="Hello, World!" />;
+  return <MyComponentWithLogger message="Hello, World!" />;
 };
 
 export default App;
