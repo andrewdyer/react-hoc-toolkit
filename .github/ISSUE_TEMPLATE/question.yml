@@ -1,0 +1,25 @@
+name: 'Question'
+description: 'Ask a question or request clarification.'
+title: '[Question]: '
+labels: ['question']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe your question or the clarification you need.
+
+  - type: input
+    id: summary
+    attributes:
+      label: 'Summary'
+      description: 'Briefly describe your question.'
+      placeholder: 'I would like to know...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 'Details'
+      description: 'Provide additional context or information.'
+      placeholder: 'Here is the background of my question...'

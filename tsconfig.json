@@ -1,14 +1,8 @@
 {
-    "compilerOptions": {
-        "target": "ES5",
-        "jsx": "react",
-        "rootDir": "./src",
-        "strict": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "types": ["jest", "@testing-library/jest-dom"]
-    },
-    "include": ["src"],
-    "exclude": ["**/*.stories.tsx", "**/*.test.tsx", "dist"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.lib.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.test.json" }
+  ]
 }
