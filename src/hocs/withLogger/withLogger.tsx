@@ -1,6 +1,7 @@
-import { type ComponentType, useEffect } from 'react';
+import { useEffect } from 'react';
+import type * as React from 'react';
 
-const withLogger = <P extends object>(Component: ComponentType<P>) => {
+const withLogger = <P extends object>(Component: React.ComponentType<P>) => {
   return (props: P) => {
     useEffect(() => {
       console.log('Props:', props);

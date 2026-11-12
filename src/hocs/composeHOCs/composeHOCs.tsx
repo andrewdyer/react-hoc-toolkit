@@ -1,9 +1,9 @@
-import type { ComponentType } from 'react';
+import type * as React from 'react';
 
 const composeHOCs = <P extends object>(
-  ...hocs: Array<(Component: ComponentType<P>) => ComponentType<P>>
+  ...hocs: Array<(Component: React.ComponentType<P>) => React.ComponentType<P>>
 ) => {
-  return (Component: ComponentType<P>) => {
+  return (Component: React.ComponentType<P>) => {
     return hocs.reduceRight(
       (WrappedComponent, hoc) => hoc(WrappedComponent),
       Component
