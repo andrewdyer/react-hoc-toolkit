@@ -1,0 +1,75 @@
+name: 'Bug report'
+description: 'Report an issue or unexpected behaviour.'
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a potential issue.
+        Please provide as much detail as possible to help reproduce and resolve it.
+
+  - type: input
+    id: summary
+    attributes:
+      label: 'Summary'
+      description: 'Briefly describe the issue.'
+      placeholder: 'Unexpected behaviour when...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 'Steps to reproduce'
+      description: 'Step-by-step instructions to reproduce the issue.'
+      placeholder: |
+        1. Step one
+        2. Step two
+        3. Step three
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 'Expected result'
+      description: 'Describe what you expected to happen.'
+      placeholder: 'The expected behaviour is...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 'Actual result'
+      description: 'Describe what actually happened.'
+      placeholder: 'Instead, the observed behaviour is...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 'Environment details'
+      description: 'Include relevant environment information.'
+      placeholder: |
+        OS: 
+        Runtime version: 
+        Browser (if applicable): 
+        Other relevant environment details:
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 'Logs or console output'
+      description: 'Paste any relevant logs or error messages.'
+      render: 'shell'
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 'Additional context'
+      description: 'Add any other relevant information or screenshots.'

@@ -1,0 +1,43 @@
+name: 'Feature request'
+description: 'Propose a new feature or enhancement.'
+title: '[Feature]: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the feature or enhancement you would like to request.
+
+  - type: input
+    id: summary
+    attributes:
+      label: 'Summary'
+      description: 'Briefly describe the proposed feature.'
+      placeholder: 'A new capability that allows...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 'Motivation'
+      description: 'Explain why this feature would be useful.'
+      placeholder: 'This feature would be beneficial because...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 'Proposed solution'
+      description: 'Describe how the feature could work.'
+      placeholder: 'The feature could function in the following way...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 'Alternatives considered'
+      description: 'List any alternative solutions or workarounds.'
+      placeholder: 'An alternative approach might be...'

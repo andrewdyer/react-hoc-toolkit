@@ -1,0 +1,34 @@
+name: 'Improvement'
+description: 'Suggest an improvement to existing functionality.'
+title: '[Improvement]: '
+labels: ['improvement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the improvement you would like to propose.
+
+  - type: input
+    id: summary
+    attributes:
+      label: 'Summary'
+      description: 'Briefly describe the improvement.'
+      placeholder: 'Improve existing behaviour by...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 'Motivation'
+      description: 'Explain why this improvement is helpful.'
+      placeholder: 'This improvement would help because...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 'Proposed change'
+      description: 'Describe the modification you suggest.'
+      placeholder: 'The improvement could be implemented like this...'
