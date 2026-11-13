@@ -9,6 +9,7 @@
     "higher-order-components",
     "hoc",
     "compose",
+    "error-boundary",
     "logger",
     "debugging"
   ],
