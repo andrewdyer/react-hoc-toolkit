@@ -1,10 +1,10 @@
 # React HOC Toolkit
 
-A higher-order component library for React applications that composes multiple HOCs into one and logs component props for debugging.
+A higher-order component library for React applications that adds reusable, composable behaviour to components without altering them.
 
 ## Introduction
 
-This library provides small, typed utilities for working with higher-order components. Composition folds a list of higher-order components into a single enhancer, applying them from right to left so that the first one listed becomes the outermost wrapper. Logging wraps a component and writes its props to the console after render whenever they change, giving visibility of the data flowing through it without altering its output.
+This library provides small, typed higher-order components that each accept a component and return an enhanced one with the same props, adding behaviour around it without changing its implementation. Because every enhancer shares this shape, any number of them can be folded into a single enhancer and applied in a predictable order, keeping cross-cutting concerns out of component code. Each is exported by name from the package entry point, so unused ones are left out of application bundles.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Import the required higher-order components from the package entry point.
 
 ## Usage
 
-Each utility accepts a component and returns an enhanced component with the same props.
+Each export is described below with a minimal example of its use.
 
 ### composeHOCs
 
