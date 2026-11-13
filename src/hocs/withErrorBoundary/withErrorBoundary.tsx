@@ -11,7 +11,7 @@ export interface FallbackRenderProps {
   error: unknown;
 
   /**
-   * Called to clear the caught error and render the wrapped component again.
+   * Called when the fallback wants to retry, clearing the caught error so the wrapped component renders again with its current props.
    */
   reset: () => void;
 }
@@ -21,21 +21,21 @@ export interface FallbackRenderProps {
  */
 export interface WithErrorBoundaryOptions {
   /**
-   * The content rendered in place of the wrapped component after it throws, either as a node or as a function of the error and a reset callback.
+   * The content rendered in place of the wrapped component after it throws, either as a node or as a function that receives {@link FallbackRenderProps}.
    *
    * @remarks
-   * A `null` or omitted fallback renders nothing once an error is caught.
+   * When omitted or `null`, nothing is rendered once an error is caught.
    */
   fallback?:
     React.ReactNode | ((props: FallbackRenderProps) => React.ReactNode);
 
   /**
-   * Called once for each error caught from the wrapped component, after the fallback is chosen, for reporting or logging.
+   * Called when the wrapped component throws, once for each caught error, so it can be reported or logged.
    *
    * @param info - The React error details, including the component stack.
    *
    * @remarks
-   * When omitted, caught errors are not reported anywhere beyond React's own development logging.
+   * React also passes every caught error to the root's `onCaughtError` handler, which logs it with `console.error` by default, whether or not this is set.
    */
   onError?: (error: unknown, info: React.ErrorInfo) => void;
 }
@@ -139,7 +139,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 /**
  * Returns the name used to identify a component in React DevTools and error messages.
  *
- * @param WrappedComponent - The component to name.
+ * @param WrappedComponent - The component, or any object with an optional `displayName` or `name`.
  * @returns The component's display name, its function name, or `'Component'` when it has neither.
  */
 const getDisplayName = (WrappedComponent: {
@@ -151,7 +151,7 @@ const getDisplayName = (WrappedComponent: {
  * Creates a component that renders the given component inside an error boundary, showing a fallback if it throws.
  *
  * @typeParam P - The props of the wrapped component, passed through unchanged.
- * @param WrappedComponent - The component to protect.
+ * @param WrappedComponent - The component whose rendering errors the boundary catches.
  * @param options - The fallback and error callback for the boundary. Defaults to rendering nothing and reporting nothing.
  * @returns A component that accepts the same props and is named `withErrorBoundary(<name>)`.
  *
