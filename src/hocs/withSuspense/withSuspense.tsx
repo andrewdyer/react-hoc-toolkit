@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import type * as React from 'react';
 
-import getDisplayName from '../../utils/getDisplayName';
+import { getDisplayName } from '../../utils';
 
 /**
  * Describes the options accepted by withSuspense.

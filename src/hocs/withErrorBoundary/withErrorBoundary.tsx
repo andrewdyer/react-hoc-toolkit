@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import type * as React from 'react';
 
-import getDisplayName from '../../utils/getDisplayName';
+import { getDisplayName } from '../../utils';
 
 /**
  * Describes the arguments passed to a {@link WithErrorBoundaryOptions.fallback} render function.
