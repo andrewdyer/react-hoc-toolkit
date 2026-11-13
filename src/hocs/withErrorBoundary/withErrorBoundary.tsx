@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import type * as React from 'react';
 
+import { getDisplayName } from '../../utils';
+
 /**
  * Describes the arguments passed to a {@link WithErrorBoundaryOptions.fallback} render function.
  */
@@ -135,17 +137,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return fallback;
   }
 }
-
-/**
- * Returns the name used to identify a component in React DevTools and error messages.
- *
- * @param WrappedComponent - The component, or any object with an optional `displayName` or `name`.
- * @returns The component's display name, its function name, or `'Component'` when it has neither.
- */
-const getDisplayName = (WrappedComponent: {
-  displayName?: string;
-  name?: string;
-}) => WrappedComponent.displayName || WrappedComponent.name || 'Component';
 
 /**
  * Creates a component that renders the given component inside an error boundary, showing a fallback if it throws.

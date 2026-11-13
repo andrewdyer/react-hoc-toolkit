@@ -59,6 +59,23 @@ const LoggedGreeting = withLogger(Greeting);
 const App = () => <LoggedGreeting message="Hello, world!" />;
 ```
 
+### withSuspense
+
+`withSuspense` wraps a component in a Suspense boundary so that, while it waits for data or code, such as a promise read with `use` or a component created with `lazy`, a fallback is shown in its place. A rejected promise is thrown as an error, so pair it with an outer `withErrorBoundary` to show an error state.
+
+```tsx
+import { use } from 'react';
+import { withSuspense } from 'react-hoc-toolkit';
+
+const Greeting = ({ message }: { message: Promise<string> }) => (
+  <p>{use(message)}</p>
+);
+
+const SuspendedGreeting = withSuspense(Greeting, {
+  fallback: <p>Loading…</p>,
+});
+```
+
 ### composeHOCs
 
 `composeHOCs` combines several higher-order components into one enhancer. They are applied from right to left, so the first argument wraps all the others. A higher-order component that takes options, such as `withErrorBoundary`, is passed as a function that supplies them.
