@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/andrewdyer/react-hoc-toolkit/compare/v2.2.0...v2.3.0) (2026-11-13)
+
+
+### Features
+
+* add profiler higher-order component ([#11](https://github.com/andrewdyer/react-hoc-toolkit/issues/11)) ([1710d98](https://github.com/andrewdyer/react-hoc-toolkit/commit/1710d9813680b1574cb023d063129ee6cf77295e))
+
 ## [2.2.0](https://github.com/andrewdyer/react-hoc-toolkit/compare/v2.1.0...v2.2.0) (2026-11-13)
 
 
