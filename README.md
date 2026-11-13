@@ -24,24 +24,6 @@ yarn add react-hoc-toolkit
 pnpm add react-hoc-toolkit
 ```
 
-## Getting Started
-
-Import the required higher-order components from the package entry point.
-
-1. Import a utility by name:
-
-   ```tsx
-   import { composeHOCs, withLogger } from 'react-hoc-toolkit';
-   ```
-
-2. Apply it to an existing component and render the enhanced result in its place:
-
-   ```tsx
-   const Greeting = ({ message }: { message: string }) => <p>{message}</p>;
-
-   const LoggedGreeting = withLogger(Greeting);
-   ```
-
 ## Usage
 
 Each export is described below with a minimal example of its use.
