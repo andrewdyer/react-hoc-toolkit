@@ -49,5 +49,8 @@ jobs:
       - name: Build package
         run: pnpm run build
 
+      - name: Check published types
+        run: pnpm run check:types
+
       - name: Build Storybook
         run: pnpm run build:storybook

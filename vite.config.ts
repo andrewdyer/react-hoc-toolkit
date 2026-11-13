@@ -13,6 +13,7 @@ export default defineConfig({
       tsconfigPath: './tsconfig.lib.json',
       insertTypesEntry: true,
       copyDtsFiles: true,
+      rollupTypes: true,
     }),
   ],
   build: {
