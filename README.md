@@ -28,24 +28,6 @@ pnpm add react-hoc-toolkit
 
 Each export is described below with a minimal example of its use.
 
-### composeHOCs
-
-`composeHOCs` combines several higher-order components into one enhancer. They are applied from right to left, so the first argument wraps all the others.
-
-```tsx
-import { composeHOCs, withLogger } from 'react-hoc-toolkit';
-
-type GreetingProps = { message: string };
-
-const Greeting = ({ message }: GreetingProps) => <p>{message}</p>;
-
-const enhance = composeHOCs<GreetingProps>(withLogger, withTheme);
-
-const EnhancedGreeting = enhance(Greeting);
-```
-
-Here `withTheme` stands for any other higher-order component with a matching props type.
-
 ### withErrorBoundary
 
 `withErrorBoundary` wraps a component in an error boundary so that an error thrown while it renders shows a fallback instead of unmounting the whole tree. The `fallback` option can be a node, or a function that receives the error and a `reset` callback which renders the component again. The optional `onError` callback receives each caught error and React's error info for reporting.
@@ -63,14 +45,6 @@ const SafeWidget = withErrorBoundary(Widget, {
 });
 ```
 
-To use it with `composeHOCs`, wrap it in a function that supplies the options:
-
-```tsx
-const enhance = composeHOCs<WidgetProps>(withLogger, (Component) =>
-  withErrorBoundary(Component, { fallback: <p>Unavailable</p> })
-);
-```
-
 ### withLogger
 
 `withLogger` logs the props of the wrapped component to the console after the first render and whenever the props change.
@@ -83,6 +57,25 @@ const Greeting = ({ message }: { message: string }) => <p>{message}</p>;
 const LoggedGreeting = withLogger(Greeting);
 
 const App = () => <LoggedGreeting message="Hello, world!" />;
+```
+
+### composeHOCs
+
+`composeHOCs` combines several higher-order components into one enhancer. They are applied from right to left, so the first argument wraps all the others. A higher-order component that takes options, such as `withErrorBoundary`, is passed as a function that supplies them.
+
+```tsx
+import { composeHOCs, withErrorBoundary, withLogger } from 'react-hoc-toolkit';
+
+type GreetingProps = { message: string };
+
+const Greeting = ({ message }: GreetingProps) => <p>{message}</p>;
+
+const enhance = composeHOCs<GreetingProps>(
+  (Component) => withErrorBoundary(Component, { fallback: <p>Unavailable</p> }),
+  withLogger
+);
+
+const EnhancedGreeting = enhance(Greeting);
 ```
 
 ## License
