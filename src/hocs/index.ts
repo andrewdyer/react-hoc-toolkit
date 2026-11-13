@@ -5,5 +5,7 @@ export type {
   WithErrorBoundaryOptions,
 } from './withErrorBoundary';
 export { default as withLogger } from './withLogger';
+export { default as withProfiler } from './withProfiler';
+export type { WithProfilerOptions } from './withProfiler';
 export { default as withSuspense } from './withSuspense';
 export type { WithSuspenseOptions } from './withSuspense';

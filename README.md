@@ -59,6 +59,21 @@ const LoggedGreeting = withLogger(Greeting);
 const App = () => <LoggedGreeting message="Hello, world!" />;
 ```
 
+### withProfiler
+
+`withProfiler` wraps a component in a React Profiler and calls `onRender` each time it, or anything it renders, commits an update, with the phase and how long the render took. The `id` passed to `onRender` defaults to the component's display name. React only reports these timings in development and in its profiling build.
+
+```tsx
+import { withProfiler } from 'react-hoc-toolkit';
+
+const Greeting = ({ message }: { message: string }) => <p>{message}</p>;
+
+const ProfiledGreeting = withProfiler(Greeting, {
+  onRender: (id, phase, actualDuration) =>
+    console.log(id, phase, actualDuration),
+});
+```
+
 ### withSuspense
 
 `withSuspense` wraps a component in a Suspense boundary so that, while it waits for data or code, such as a promise read with `use` or a component created with `lazy`, a fallback is shown in its place. A rejected promise is thrown as an error, so pair it with an outer `withErrorBoundary` to show an error state.
