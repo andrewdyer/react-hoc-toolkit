@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/andrewdyer/react-hoc-toolkit/compare/v2.0.2...v2.1.0) (2026-11-13)
+
+
+### Features
+
+* add error boundary higher-order component ([#7](https://github.com/andrewdyer/react-hoc-toolkit/issues/7)) ([8c0ad9e](https://github.com/andrewdyer/react-hoc-toolkit/commit/8c0ad9eafbb1b2c8ecf7964e35e5cc641f3d3340))
+
 ## [2.0.2](https://github.com/andrewdyer/react-hoc-toolkit/compare/v2.0.1...v2.0.2) (2026-11-13)
 
 
