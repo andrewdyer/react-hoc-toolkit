@@ -1,7 +1,7 @@
 {
   "name": "react-hoc-toolkit",
   "description": "A higher-order component library for React applications that adds reusable, composable behaviour to components without altering them.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "keywords": [
     "typescript",
     "react",

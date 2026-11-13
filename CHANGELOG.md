@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/andrewdyer/react-hoc-toolkit/compare/v2.1.0...v2.2.0) (2026-11-13)
+
+
+### Features
+
+* add suspense higher-order component ([#9](https://github.com/andrewdyer/react-hoc-toolkit/issues/9)) ([9d54a36](https://github.com/andrewdyer/react-hoc-toolkit/commit/9d54a3635305a05a34a5372d9f3ecd3b391c7a1e))
+
 ## [2.1.0](https://github.com/andrewdyer/react-hoc-toolkit/compare/v2.0.2...v2.1.0) (2026-11-13)
 
 
