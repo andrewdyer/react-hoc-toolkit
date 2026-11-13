@@ -1,6 +1,6 @@
 {
   "name": "react-hoc-toolkit",
-  "description": "A higher-order component library for React applications that composes multiple HOCs into one and logs component props for debugging.",
+  "description": "A higher-order component library for React applications that adds reusable, composable behaviour to components without altering them.",
   "version": "2.1.0",
   "keywords": [
     "typescript",
