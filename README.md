@@ -64,6 +64,31 @@ const EnhancedGreeting = enhance(Greeting);
 
 Here `withTheme` stands for any other higher-order component with a matching props type.
 
+### withErrorBoundary
+
+`withErrorBoundary` wraps a component in an error boundary so that an error thrown while it renders shows a fallback instead of unmounting the whole tree. The `fallback` option can be a node, or a function that receives the error and a `reset` callback which renders the component again. The optional `onError` callback receives each caught error and React's error info for reporting.
+
+```tsx
+import { withErrorBoundary } from 'react-hoc-toolkit';
+
+const SafeWidget = withErrorBoundary(Widget, {
+  fallback: ({ reset }) => (
+    <button type="button" onClick={reset}>
+      Try again
+    </button>
+  ),
+  onError: (error, info) => report(error, info),
+});
+```
+
+To use it with `composeHOCs`, wrap it in a function that supplies the options:
+
+```tsx
+const enhance = composeHOCs<WidgetProps>(withLogger, (Component) =>
+  withErrorBoundary(Component, { fallback: <p>Unavailable</p> })
+);
+```
+
 ### withLogger
 
 `withLogger` logs the props of the wrapped component to the console after the first render and whenever the props change.
