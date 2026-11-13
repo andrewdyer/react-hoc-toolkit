@@ -11,7 +11,8 @@
     "compose",
     "error-boundary",
     "logger",
-    "debugging"
+    "debugging",
+    "suspense"
   ],
   "author": "Andrew Dyer (https://github.com/andrewdyer)",
   "license": "MIT",

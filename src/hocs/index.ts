@@ -5,3 +5,5 @@ export type {
   WithErrorBoundaryOptions,
 } from './withErrorBoundary';
 export { default as withLogger } from './withLogger';
+export { default as withSuspense } from './withSuspense';
+export type { WithSuspenseOptions } from './withSuspense';
