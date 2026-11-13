@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/andrewdyer/react-hoc-toolkit/compare/v2.0.0...v2.0.1) (2026-11-13)
+
+
+### Bug Fixes
+
+* bundle type declarations so nodenext consumers resolve them ([38bcb9b](https://github.com/andrewdyer/react-hoc-toolkit/commit/38bcb9b7fd31ec58f3be876e5d358b746844babf))
+
 ## [2.0.0](https://github.com/andrewdyer/react-hoc-toolkit/compare/1.1.0...v2.0.0) (2026-11-12)
 
 
