@@ -12,6 +12,7 @@
     "error-boundary",
     "logger",
     "debugging",
+    "profiler",
     "suspense"
   ],
   "author": "Andrew Dyer (https://github.com/andrewdyer)",
